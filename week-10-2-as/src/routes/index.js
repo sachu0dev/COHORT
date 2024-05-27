@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var expresss = require("express");
+var todo_1 = require("./todo");
+var user_1 = require("./user");
+var app = expresss();
+var router = expresss.Router();
+router.use("/user", user_1.default);
+router.use("/todo", todo_1.default);
+exports.default = router;
